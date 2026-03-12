@@ -12,10 +12,12 @@
 - **Transfers Between Wallets**: Perform seamless transfers between different wallets. 🔄
 - **Authentication and Authorization**: Secure your application with robust authentication and authorization mechanisms. 🔐
 - **Email Notifications**: Receive notifications via email for important actions and updates. 📧
+- **Email Confirmation:** Confirm user email addresses for added security and account verification. 📩
+- **File Management:** Upload, store, and manage files related to your transactions and accounts. 📂
 
 ## ⚙️ Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript (using frameworks/libraries as applicable)
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap, Syncfusion
 - **Backend**: ASP.NET Core MVC
 - **Database**: Microsoft SQL Server (MS SQL)
 - **ORM**: Entity Framework Core
@@ -32,20 +34,43 @@ To set up the project locally, follow these steps:
    cd ExpenseTracker
 3. **Install the necessary dependencies:**
    ```bash
-   # Use the appropriate command for your backend
+   # Run this command inside the project folder:
+   dotnet restore
 4. **Set up the database:**
    ```bash
-   # Configure your MS SQL database by applying the provided migrations or running the setup scripts
+   # Replace "YourSecurePassword", "your-email@gmail.com", "your-secure-app-password", and "YourSyncfusionLicenseKeyHere" with the actual values only in your development or production environment.
+   {
+     "Logging": {
+       "LogLevel": {
+         "Default": "Information",
+         "Microsoft.AspNetCore": "Warning"
+       }
+     },
+     "AllowedHosts": "*",
+     "ConnectionStrings": {
+       "ExpenseTrackerDbContextConnection": "Server=localhost; Database=ExpenseTracker; User Id=sa; Password=YourSecurePassword; TrustServerCertificate=True;"
+     },
+     "MailSettings": {
+       "From": "your-email@gmail.com",
+       "SmtpServer": "smtp.gmail.com",
+       "Port": 465,
+       "Username": "your-email@gmail.com",
+       "Password": "your-secure-app-password"
+     },
+     "SyncfusionKey": "YourSyncfusionLicenseKeyHere"
+   }
+
 5. **Run the application:**
    ```bash
-   # Use the command to start your application
+   dotnet run
 ## 🛠️ Usage
 
-1. **Register or log in to your account.**
-2. **Create wallets to manage your finances effectively.**
-3. **Add income and expenses, categorizing them as needed.**
-4. **Perform transfers between wallets for smooth financial management.**
-5. **Enjoy email notifications for key actions and updates! 🎉**
+1. **Register or Log In to start managing your finances.**
+2. **Confirm Your Email to secure and verify your account. 📩**
+3. **Create Wallets to organize your money for different goals.**
+4. **Add Income and Expenses with categories for better insights.**
+5. **Transfer Between Wallets for easy, organized finances.**
+6. **Receive Email Notifications for important actions and updates! 🎉**
 
 ## 🤝 Contributing
 
@@ -66,5 +91,3 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 ## 📝 License
 This project is licensed under the MIT License.
-  ```sql
-  Feel free to customize any part further, especially the emojis, to match your style and preferences!

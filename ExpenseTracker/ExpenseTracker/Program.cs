@@ -28,7 +28,7 @@ else
     app.UseDeveloperExceptionPage();
     using var scope = app.Services.CreateScope();
     var context = scope.ServiceProvider.GetRequiredService<ExpenseTrackerDbContext>();
-    DatabaseSeeder.SeedAllData(context);
+    //DatabaseSeeder.SeedAllData(context);
 }
 
 app.UseHttpsRedirection();

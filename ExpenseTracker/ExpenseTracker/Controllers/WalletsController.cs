@@ -25,6 +25,7 @@ public class WalletsController : Controller
 
         return View(wallets);
     }
+    
 
     public IActionResult Details([FromRoute] WalletRequest request)
     {
